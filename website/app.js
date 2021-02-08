@@ -4,9 +4,8 @@
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
-//Key, Api_Key and Base_Url
-const KEY = '517812ab5025e0f7a32d33b648544845';
-const API_KEY = `&appid=${KEY}`;
+//Api_Key and Base_Url
+const API_KEY = `&appid=517812ab5025e0f7a32d33b648544845`;
 const BASE_URL = `http://api.openweathermap.org/data/2.5/weather?zip=`;
 //Fetching data from api
 const getData = async(BASE_URL,zip,API_KEY)=>{
