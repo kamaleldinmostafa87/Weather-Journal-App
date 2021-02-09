@@ -3,15 +3,17 @@
 // const { get } = require("http");
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+console.log(d.getMonth()+1);
+let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 //Api_Key and Base_Url
-const API_KEY = `&appid=517812ab5025e0f7a32d33b648544845`;
+const API_KEY = `&appid=517812ab5025e0f7a32d33b648544845&units=imperial`;
 const BASE_URL = `http://api.openweathermap.org/data/2.5/weather?zip=`;
 //Fetching data from api
 const getData = async(BASE_URL,zip,API_KEY)=>{
     const response = await fetch(BASE_URL+zip+API_KEY);
     try{
     const data = await response.json();
+    console.log(data);
     return data;
     }catch(error){
         alert('zip does not exist')
