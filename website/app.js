@@ -3,7 +3,6 @@
 // const { get } = require("http");
 // Create a new date instance dynamically with JS
 let d = new Date();
-console.log(d.getMonth()+1);
 let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 //Api_Key and Base_Url
 const API_KEY = `&appid=517812ab5025e0f7a32d33b648544845&units=imperial`;
